@@ -1,6 +1,10 @@
 # RolloutIW
 
-Implementation of RolloutIW in combination with Variational Autoencoders.
+Official code for:
+
+[Planning From Pixels in Atari With Learned Symbolic Representations](https://arxiv.org/abs/2012.09126) (AAAI 2021)<br/>
+Andrea Dittadi\*, Frederik K. Drachmann\*, Thomas Bolander
+
 
 ## Experiments
 
