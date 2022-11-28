@@ -107,9 +107,9 @@ class TreeActor:
         
         if self.last_node is not node:
             self.env.unwrapped.restore_state(node.data["s"])
-
-        next_obs, reward, end_of_episode, info = self.env.step(action)
-        node_for_data = {"a" : action, "r" : reward, "done" : end_of_episode, "obs" : next_obs}
+        
+        next_obs, reward, end_of_episode, _, info = self.env.step(action)
+        node_for_data = {"a" : action, "r" : reward, "done" : end_of_episode, "obs" : next_obs.flatten()}
         node_for_data.update(info)
         child = self.tree.add_node(node, node_for_data)
         self._update_state(node,child)

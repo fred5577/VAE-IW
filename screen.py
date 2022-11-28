@@ -58,7 +58,7 @@ class Screen():
             return self.Bprost(env, new_node, prev_node)
 
     def Bprost(self, env, new_node, prev_node):
-        one_dim_screen = np.array(env.ale.getScreen(), dtype="int32")
+        one_dim_screen = np.array(env.ale.getScreen(), dtype="int32").flatten()
         if prev_node is not None:
             prev_basic_features = prev_node.data['features']
             bprost_features = bprost_lib.bprost(one_dim_screen, prev_basic_features, False)

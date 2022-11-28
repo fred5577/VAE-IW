@@ -105,7 +105,7 @@ if __name__ == "__main__":
         step_count = 0
 
     # Ready enviroment
-    env = gym.make(env_id)
+    env = gym.make('ALE/'+env_id)
     # Creates the rollouts
     if env_has_wrapper(env, gym.wrappers.TimeLimit):
         env = remove_env_wrapper(env, gym.wrappers.TimeLimit)
