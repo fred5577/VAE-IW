@@ -45,7 +45,7 @@ pip install ./RolloutIW
 The planner can then be used to run with Rollout IW with B-PROST for 5 rounds and a 0.5 budget.
 
 ```python
-python3 planner.py --env Alien-v4 --frame-skip 15 --time-budget 0.5 --round 5
+python3 planner.py --env Alien-v5 --frame-skip 15 --time-budget 0.5 --round 5
 ```
 
 
@@ -54,7 +54,7 @@ python3 planner.py --env Alien-v4 --frame-skip 15 --time-budget 0.5 --round 5
 1. If you already have an Atari dataset to train on move the next step. Otherwise run the following code to create a dataset of 15.000 images by running B-PROST
 
 ```python
-python3 planner.py --env Alien-v4 --frame-skip 15 --time-budget 0.5 --save-images True
+python3 planner.py --env Alien-v5 --frame-skip 15 --time-budget 0.5 --save-images True
 ```
 
 2. Train a model for Alien.
@@ -66,6 +66,6 @@ python3 training.py --epochs 100 --batch-size 64 --env Alien --zdim 20 --sigma 1
 3. Run the planner with the VAE model.
 
 ```python
-python3 planner.py --env Alien-v4 --image-size-planning 128 --xydim 15 --model-name {path to model} --test-round-of-model True --features model --zdim 20 --time-budget 0.5 --rounds-to-run 5
+python3 planner.py --env Alien-v5 --image-size-planning 128 --xydim 15 --model-name {path to model} --test-round-of-model True --features model --zdim 20 --time-budget 0.5 --rounds-to-run 5
 ```
 
